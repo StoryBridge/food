@@ -16,7 +16,6 @@ public class MemberVO {
 	private Integer register_state;
 	private Date register_date;
 	private String sales_time;
-	
 	public String getU_id() {
 		return u_id;
 	}
@@ -53,10 +52,10 @@ public class MemberVO {
 	public void setCo_name(String co_name) {
 		this.co_name = co_name;
 	}
-	public Integer getCo_num() {
+	public long getCo_num() {
 		return co_num;
 	}
-	public void setCo_num(Integer co_num) {
+	public void setCo_num(long co_num) {
 		this.co_num = co_num;
 	}
 	public String getCo_doc() {
@@ -71,8 +70,6 @@ public class MemberVO {
 	public void setCo_intro(String co_intro) {
 		this.co_intro = co_intro;
 	}
-	
-	
 	public Integer getRegister_state() {
 		return register_state;
 	}
@@ -98,7 +95,5 @@ public class MemberVO {
 				+ ", co_intro=" + co_intro + ", register_state=" + register_state + ", register_date=" + register_date
 				+ ", sales_time=" + sales_time + "]";
 	}
-	
-	
 
 }
