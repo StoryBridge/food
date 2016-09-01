@@ -8,7 +8,7 @@ public class MemberVO {
 	private String u_email;
 	private String u_phone;
 	private String co_name;
-	private Integer co_num;
+	private long co_num;
 	private String co_doc;
 	private String co_intro;
 	
@@ -49,10 +49,10 @@ public class MemberVO {
 	public void setCo_name(String co_name) {
 		this.co_name = co_name;
 	}
-	public Integer getCo_num() {
+	public long getCo_num() {
 		return co_num;
 	}
-	public void setCo_num(Integer co_num) {
+	public void setCo_num(long co_num) {
 		this.co_num = co_num;
 	}
 	public String getCo_doc() {
