@@ -10,7 +10,7 @@ public class MemberVO {
 	private String u_email;
 	private String u_phone;
 	private String co_name;
-	private Integer co_num;
+	private long co_num;
 	private String co_doc;
 	private String co_intro;
 	private Integer register_state;
