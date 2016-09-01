@@ -8,8 +8,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.food.domain.MemberVO;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
-@Repository
+@Service
 public class MemberServiceImpl implements MemberService {
 	
 	@Inject
