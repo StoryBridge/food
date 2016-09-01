@@ -1,5 +1,7 @@
 package org.food.domain;
 
+import java.sql.Date;
+
 public class MemberVO {
 
 	private String u_id;
@@ -8,10 +10,12 @@ public class MemberVO {
 	private String u_email;
 	private String u_phone;
 	private String co_name;
-	private long co_num;
+	private Integer co_num;
 	private String co_doc;
 	private String co_intro;
-	
+	private Integer register_state;
+	private Date register_date;
+	private String sales_time;
 	
 	public String getU_id() {
 		return u_id;
@@ -49,10 +53,10 @@ public class MemberVO {
 	public void setCo_name(String co_name) {
 		this.co_name = co_name;
 	}
-	public long getCo_num() {
+	public Integer getCo_num() {
 		return co_num;
 	}
-	public void setCo_num(long co_num) {
+	public void setCo_num(Integer co_num) {
 		this.co_num = co_num;
 	}
 	public String getCo_doc() {
@@ -69,11 +73,32 @@ public class MemberVO {
 	}
 	
 	
+	public Integer getRegister_state() {
+		return register_state;
+	}
+	public void setRegister_state(Integer register_state) {
+		this.register_state = register_state;
+	}
+	public Date getRegister_date() {
+		return register_date;
+	}
+	public void setRegister_date(Date register_date) {
+		this.register_date = register_date;
+	}
+	public String getSales_time() {
+		return sales_time;
+	}
+	public void setSales_time(String sales_time) {
+		this.sales_time = sales_time;
+	}
 	@Override
 	public String toString() {
 		return "MemberVO [u_id=" + u_id + ", u_pw=" + u_pw + ", u_name=" + u_name + ", u_email=" + u_email
 				+ ", u_phone=" + u_phone + ", co_name=" + co_name + ", co_num=" + co_num + ", co_doc=" + co_doc
-				+ ", co_intro=" + co_intro + "]";
+				+ ", co_intro=" + co_intro + ", register_state=" + register_state + ", register_date=" + register_date
+				+ ", sales_time=" + sales_time + "]";
 	}
 	
+	
+
 }
