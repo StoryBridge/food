@@ -1,10 +1,10 @@
-package org.food.persistence;
+package org.food.service;
 
 import java.util.List;
 
 import org.food.domain.MenuVO;
 
-public interface MenuDAO {
+public interface MenuService {
 	
 	public void insert(MenuVO vo)throws Exception;
 	
@@ -13,4 +13,5 @@ public interface MenuDAO {
 	public void update(MenuVO vo)throws Exception;
 	
 	public void delete(MenuVO vo)throws Exception;
+
 }
