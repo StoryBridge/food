@@ -25,7 +25,7 @@ public class QnaController {
 	
 	@RequestMapping(value="/index", method = RequestMethod.GET)
 	public void list(Model model, Integer page, QnaVO vo) throws Exception {
-		logger.info("�몃���ㅻ��� ����");
+		
 
 	
 //		int total = service.pageCount();
