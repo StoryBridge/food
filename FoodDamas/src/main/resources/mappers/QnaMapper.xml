@@ -9,9 +9,9 @@
 		insert into tbl_qna (title,content,c_id) values (#{title}, #{content},#{c_id})
 	</insert>
 
-
-
-
+<select id="read" resultType="org.food.domain.QnaVO">
+	select * from tbl_qna order by qno desc limit #{qno},10	
+	</select>
 
 
 
