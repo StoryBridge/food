@@ -28,6 +28,8 @@ public class InfoController {
 	
 	@Inject
 	private SalesService service;
+	@Inject
+
 	
 	@RequestMapping(value="/info", method = RequestMethod.GET)
 	public void list(){

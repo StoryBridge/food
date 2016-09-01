@@ -39,7 +39,7 @@ public class MemberTest {
 
    @Test
    public void tbl_ft_view() throws Exception{
-      System.out.println(dao.readOne("UserTestID01"));
+      System.out.println(dao.readOne("food1"));
       
    }
    
