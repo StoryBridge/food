@@ -17,8 +17,7 @@ public class MemberVO {
 	private Date register_date;
 	private String sales_time;
 	private String u_profile_img;
-	private String f_code;
-	
+	private Integer f_code;
 	public String getU_id() {
 		return u_id;
 	}
@@ -97,10 +96,10 @@ public class MemberVO {
 	public void setU_profile_img(String u_profile_img) {
 		this.u_profile_img = u_profile_img;
 	}
-	public String getF_code() {
+	public Integer getF_code() {
 		return f_code;
 	}
-	public void setF_code(String f_code) {
+	public void setF_code(Integer f_code) {
 		this.f_code = f_code;
 	}
 	@Override
