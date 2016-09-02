@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping("/login")
+@RequestMapping("/")
 public class MemberController {
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 
@@ -30,10 +30,13 @@ public class MemberController {
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String ft_registerPOST(MemberVO vo, RedirectAttributes rttr) throws Exception {
 		logger.info("푸드트럭 회원가입");
+		System.out.println(vo);
 		service.insert(vo);
 		rttr.addFlashAttribute("result", "success");
-		return "redirect:/login/home";
+		return "redirect:/login";
 	}
+	
+	
 
 }
 

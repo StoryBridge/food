@@ -100,13 +100,13 @@
 
         <form role="form" method="post" class="login-form" action="">
             <div class="form-group">
-                <label class="sr-only" for="form-UserID"></label>
-                <input type="form-control" name="form-userID" placeholder="아이디를 입력하세요" class="form-UserID form-control" id="form-UserID">
+                <label class="sr-only" for="u_id"></label>
+                <input type="form-control" name="u_id" placeholder="아이디를 입력하세요" class="form-UserID form-control" id="form-UserID">
             </div>
 
             <div class="form-group">
-                <label class="sr-only" for="form-UserPW"></label>
-                <input type="password" name="form-UserPW" placeholder="패스워드를 입력하세요" class="UserPW form-control" id="form-UserPW">
+                <label class="sr-only" for="u_pw"></label>
+                <input type="password" name="u_pw" placeholder="패스워드를 입력하세요" class="UserPW form-control" id="form-UserPW">
             </div>
 
             <div class="form-group">
@@ -116,30 +116,30 @@
 
             <div class="form-group">
                 <div style="width:30%;"> 프로필 사진</div>
-                <div style="float:inherit"><input type="file" name="form-Co-Doc" class="form-Co-Doc form-control" id="form-Co-Doc"></div>
+                <div style="float:inherit"><input type="file" name="u_profile_img" class="form-Co-Doc form-control" id="form-Co-Doc"></div>
             </div>
 
             <div class="form-group">
-                <label class="sr-only" for="form-UserName"></label>
-                <input type="form-control" name="form-UserName" placeholder="성함을 입력해주세요" class="form-UserName form-control" id="form-UserName">
+                <label class="sr-only" for="u_name"></label>
+                <input type="form-control" name="u_name" placeholder="성함을 입력해주세요" class="form-UserName form-control" id="form-UserName">
             </div>
 
             <div class="form-group">
-                <label class="sr-only" for="form-UserEmail"></label>
-                <input type="form-control" name="form-UserEmail" placeholder="이메일을 입력해주세요" class="form-UserEmail form-control" id="form-UserEmail">
+                <label class="sr-only" for="u_email"></label>
+                <input type="form-control" name="u_email" placeholder="이메일을 입력해주세요" class="form-UserEmail form-control" id="form-UserEmail">
             </div>
 
             <div class="form-group">
-                <label class="sr-only" for="form-UserPhone"></label>
-                <input type="tel" name="form-UserPhone" placeholder="-를 제외하고 입력해주세요" class="form-UserPhone form-control" id="form-UserPhone">
+                <label class="sr-only" for="u_phone"></label>
+                <input type="tel" name="u_phone" placeholder="-를 제외하고 입력해주세요" class="form-UserPhone form-control" id="form-UserPhone">
             </div>
 
             <div class="form-group">
-                <label class="sr-only" for="form-Co-Name"></label>
-                <input type="form-control" name="form-Co-Name" placeholder="상호 " class="form-Co-Name form-control" id="form-Co-Name">
+                <label class="sr-only" for="co_name"></label>
+                <input type="form-control" name="co_name" placeholder="상호 " class="form-Co-Name form-control" id="form-Co-Name">
                 <div class="form-group" style="float: right">
                     음식카테고리
-                    <select id="form-Co-type">
+                    <select id="form-Co-type" name=f_code>
                         <option value="0">한식</option>
                         <option value="1">중식</option>
                         <option value="2">일식</option>
@@ -150,13 +150,13 @@
             </div>
 
             <div class="form-group">
-                <label class="sr-only" for="form-Co-num"></label>
-                <input type="form-control" name="form-Co-num" placeholder="사업자등록번호를 입력해주세요" class="form-Co-num form-control" id="form-Co-num">
+                <label class="sr-only" for="co_num"></label>
+                <input type="form-control" name="co_num" placeholder="사업자등록번호를 입력해주세요" class="form-Co-num form-control" id="form-Co-num">
             </div>
 
             <div class="form-group">
                 <div style="width:30%;"> 사업자등록증 첨부파일</div>
-                <div style="float:inherit"><input type="file" name="form-Co-Doc" class="form-Co-Doc form-control" id="form-Co-Doc"></div>
+                <div style="float:inherit"><input type="file" name="co_doc" class="form-Co-Doc form-control" id="form-Co-Doc"></div>
             </div>
 
             <button type="submit" class="btn">회원가입 완료</button>
