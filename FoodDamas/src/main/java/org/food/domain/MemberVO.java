@@ -16,6 +16,9 @@ public class MemberVO {
 	private Integer register_state;
 	private Date register_date;
 	private String sales_time;
+	private String u_profile_img;
+	private String f_code;
+	
 	public String getU_id() {
 		return u_id;
 	}
@@ -88,12 +91,27 @@ public class MemberVO {
 	public void setSales_time(String sales_time) {
 		this.sales_time = sales_time;
 	}
+	public String getU_profile_img() {
+		return u_profile_img;
+	}
+	public void setU_profile_img(String u_profile_img) {
+		this.u_profile_img = u_profile_img;
+	}
+	public String getF_code() {
+		return f_code;
+	}
+	public void setF_code(String f_code) {
+		this.f_code = f_code;
+	}
 	@Override
 	public String toString() {
 		return "MemberVO [u_id=" + u_id + ", u_pw=" + u_pw + ", u_name=" + u_name + ", u_email=" + u_email
 				+ ", u_phone=" + u_phone + ", co_name=" + co_name + ", co_num=" + co_num + ", co_doc=" + co_doc
 				+ ", co_intro=" + co_intro + ", register_state=" + register_state + ", register_date=" + register_date
-				+ ", sales_time=" + sales_time + "]";
+				+ ", sales_time=" + sales_time + ", u_profile_img=" + u_profile_img + ", f_code=" + f_code + "]";
 	}
-
+	
+	
+	
+	
 }

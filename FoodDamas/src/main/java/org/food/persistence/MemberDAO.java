@@ -14,7 +14,9 @@ public interface MemberDAO {
 	
 	public void delete(String u_id) throws Exception;
 	
-	public List<MemberVO> listAll(String u_id) throws Exception;
+	public List<MemberVO> listState(Integer register_state) throws Exception;
+	
+	public void updateState(MemberVO vo) throws Exception;
 	
 	public Integer pageCount() throws Exception;	
 
