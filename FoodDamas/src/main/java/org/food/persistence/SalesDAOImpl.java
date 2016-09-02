@@ -35,5 +35,10 @@ public class SalesDAOImpl implements SalesDAO {
 
 
 	}
+	@Override
+	public SalesVO readSalesOne(String u_id) {
+		// TODO Auto-generated method stub
+		return sqlsession.selectOne("org.food.persistence.SalesMapper.readOne", u_id);
+	}
 
 }

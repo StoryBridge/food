@@ -28,12 +28,12 @@ public class SalesTest {
 	@Test
 	public void read() {
 
-		System.out.println(dao.read("food1"));
+		System.out.println(dao.readSalesOne("food1"));
 	}
 	@Test
 	public void update() {
 		dao.update("food1");
-		System.out.println(dao.read("food1"));
+		System.out.println(dao.readSalesOne("food1"));
 	}
 
 }

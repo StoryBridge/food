@@ -277,7 +277,6 @@ body {
 
 					infoManager.view(u_id,display);
 					function display(data) {
-						console.log(data);
 						//지도, 이름
 						lng=data.list[0].lng;
 						lat=data.list[0].lat;
@@ -347,4 +346,3 @@ body {
 </body>
 
 </html>
-	

@@ -25,40 +25,20 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("/")
-public class InfoController {
-	private static final Logger logger = LoggerFactory.getLogger(InfoController.class);
+public class LoginController {
+	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 	
 	@Inject
 	private SalesService service;
 
-	@RequestMapping(value="/info", method = RequestMethod.GET)
+	@RequestMapping(value="/login", method = RequestMethod.GET)
 	public void list(Model model,String u_id) throws Exception{
-		logger.info("그냥 열어주는애");
-		System.out.println(u_id);
-		model.addAttribute("info", service.readOne("food1"));//멤버
-		model.addAttribute("list", service.readSalesOne("food1"));//sales
-		System.out.println(service.readOne("food1"));
-		System.out.println("==================");
-		System.out.println(service.readSalesOne("food1"));
+		logger.info("로그인페이지~~");
 		
 	
 		
 	}
 	
-	@CrossOrigin
-	@ResponseBody
-	@RequestMapping(value="/list/{u_id}", method = RequestMethod.GET)
-	public Map<String, Object> listGET(@PathVariable String u_id) throws Exception{
-		System.out.println("확인");
-		logger.info("여기오냥");
-		
-		Map<String, Object> result=new HashMap<>();
-		result.put("list", service.read(u_id));
-		result.put("info",service.readOne(u_id));
-	
-		return result;
-		
-	}
 
 	
 	

@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.food.domain.MemberVO;
 import org.food.domain.SalesVO;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
@@ -14,6 +15,12 @@ public class SalesServiceImpl implements SalesService {
 
 	@Inject
 	private SqlSessionTemplate sqlsession;
+
+	@Override
+	public MemberVO readOne(String u_id) throws Exception {
+		// TODO Auto-generated method stub
+		return sqlsession.selectOne("org.food.persistence.MemberMapper.readOne", u_id);
+	}
 
 	@Override
 	public void insert(SalesVO vo) {
@@ -34,6 +41,12 @@ public class SalesServiceImpl implements SalesService {
 		sqlsession.update("org.food.persistence.SalesMapper.update",u_id);
 
 
+	}
+
+	@Override
+	public SalesVO readSalesOne(String u_id) {
+		// TODO Auto-generated method stub
+		return sqlsession.selectOne("org.food.persistence.SalesMapper.readOne", u_id);
 	}
 
 }
