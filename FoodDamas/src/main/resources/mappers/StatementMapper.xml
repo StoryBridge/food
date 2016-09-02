@@ -32,7 +32,7 @@
 	</select>
 
 	<select id="menu" resultType="hashmap">
-		select u_id, sum(quantity), m_name
+		select *, u_id, sum(quantity), m_name
 		from tbl_ft_menu as menu inner join tbl_ft_order_detail as ord on
 		menu.mno = ord.mno where u_id=#{u_id} group by menu.mno;
 	</select>

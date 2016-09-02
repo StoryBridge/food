@@ -20,7 +20,7 @@ html, body {
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Riona - One Page Bootstrap Business Template</title>
+<title>Food Damas</title>
 
 <!-- CSS -->
 <base href="resources/">
@@ -63,7 +63,9 @@ html, body {
 </head>
 
 <body>
-
+	<script>
+		console.log("하이");
+	</script>
 
 
 	<!-- Loader -->
@@ -117,7 +119,7 @@ html, body {
 				<span></span>
 			</div>
 			<h1>
-				<a href="">THIS IS RIONA</a>
+				<a href="">Sales Analysis</a>
 			</h1>
 			<div class="divider-2">
 				<span></span>
@@ -133,9 +135,50 @@ html, body {
 
 
 	<!-- Sales Anal -->
+	<div style="border: 1px solid red;  height:200px ">
+		<div class="col-xs-6" id=orderByLocation style="border:5px solid yellow;"> 
+		
+		<div class="nav-tabs-custom">
+            <!-- Tabs within a box -->
+            <ul class="nav nav-tabs pull-right">
+              <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
+              <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
+              <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
+            </ul>
+            <div class="tab-content no-padding">
+              <!-- Morris chart - Sales -->
+              <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
+              <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
+            </div>
+          </div>
+		
+		
+		</div>
+		<div class="col-xs-6" id=orderByDaily>일별</div>
+
+		<div class="col-xs-6"id=orderByMonthly>월별</div>
+		<div class="col-xs-6" id=orderByMenu>메뉴별</div>
 
 
+	</div>
+	<script>
+		$(document).ready(function() {
+			var u_id = "zzennam";
+			
 
+			statManager.statement(u_id, display);
+			function display(data) {
+				console.log(data);
+				console.log(data.location);
+				console.log(data.daily);
+				console.log(data.monthly);
+				console.log(data.menu);
+				console.log("------");
+				console.log(data.location[0].location);
+				document.getElementById("orderByLocation").innerHTML =data.location[0].location;
+			}
+		});
+	</script>
 
 
 	<!-- Javascript -->
@@ -148,7 +191,7 @@ html, body {
 	<script src="assets/js/jquery.magnific-popup.min.js"></script>
 	<script src="assets/js/masonry.pkgd.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-	<script src="assets/js/info.js"></script>
+	<script src="assets/js/statement.js"></script>
 
 
 	<!--[if lt IE 10]>
