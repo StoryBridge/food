@@ -3,12 +3,15 @@ package org.food.persistence;
 import org.food.domain.SalesVO;
 import java.util.List;
 
-public interface SalesDAO {
+public interface StatementDAO {
 	
-	public void insert(SalesVO vo);
-	public List<SalesVO> read(String u_id);
-	public void update(String u_id);
-	
-	public SalesVO readSalesOne(String u_id);
+	public List<SalesVO> orderByLocation(String u_id);
+
+	public List<SalesVO> orderByDay(String u_id);
+
+	public List<SalesVO> orderByMonth(String u_id);
+
+	public List<SalesVO> orderByMenu(String u_id);
+
 
 }

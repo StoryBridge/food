@@ -10,35 +10,32 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public class SalesDAOImpl implements SalesDAO {
+public class StatementDAOImpl implements StatementDAO {
 
 	@Inject
 	private SqlSessionTemplate sqlsession;
 
 	@Override
-	public void insert(SalesVO vo) {
+	public List<SalesVO> orderByLocation(String u_id) {
 		// TODO Auto-generated method stub
-		sqlsession.insert("org.food.persistence.SalesMapper.insert",vo);
-
+		return sqlsession.selectList("org.food.persistence.StatementMapper.location", u_id);
 	}
 
 	@Override
-	public List<SalesVO> read(String u_id) {
-		// TODO Auto-generated method stub
-		return 		sqlsession.selectList("org.food.persistence.SalesMapper.read",u_id);
+	public List<SalesVO> orderByDay(String u_id) {
+		return sqlsession.selectList("org.food.persistence.StatementMapper.day", u_id);
 	}
 
 	@Override
-	public void update(String u_id) {
-		// TODO Auto-generated method stub
-		sqlsession.update("org.food.persistence.SalesMapper.update",u_id);
-
-
+	public List<SalesVO> orderByMonth(String u_id) {
+		return sqlsession.selectList("org.food.persistence.StatementMapper.month", u_id);
 	}
+
 	@Override
-	public SalesVO readSalesOne(String u_id) {
-		// TODO Auto-generated method stub
-		return sqlsession.selectOne("org.food.persistence.SalesMapper.readOne", u_id);
+	public List<SalesVO> orderByMenu(String u_id) {
+		return sqlsession.selectList("org.food.persistence.StatementMapper.menu", u_id);
 	}
+	
 
+	
 }
